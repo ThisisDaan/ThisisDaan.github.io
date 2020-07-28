@@ -82,6 +82,15 @@ body {
     color: var(--text);
 }
 
+a {
+    color: var(--text);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
 .layout {
     padding: var(--margin);
 }
@@ -121,11 +130,7 @@ body {
     text-align: center;
 }
 
-
-
 .start-game {
-    color: var(--text);
-    text-decoration: none;
     opacity: 1;
     padding: var(--margin);
     animation: blinker 2s linear infinite;
@@ -135,6 +140,7 @@ body {
 .start-game:hover {
     border-radius: 15px;
     border: 2px solid var(--accent_colour);
+    text-decoration: none;
 }
 
 @keyframes blinker {
@@ -220,17 +226,18 @@ Navigation
     overflow: hidden;
 }
 
+.dropdown-menu li {
+    width: 100%;
+}
+
 @media (max-width: 768px) {
     .dropdown-menu {
         position: relative;
     }
 
-
-
-    /* .navigation li {
-        width: 100%;
-
-    } */
+    .layout {
+        padding: 15px;
+    }
 
     .navigation .item {
         padding: 15px;
@@ -254,19 +261,27 @@ Navigation
 .main {
     display: flex;
     flex-direction: column;
+
 }
 
 .container.notification {
     border-color: #600020;
 }
 
-.container {
-    margin-top: var(--margin);
+.container h2 {
+    margin-bottom: var(--margin);
 }
 
 .container {
+    margin-top: var(--margin);
     width: 100%;
     border-radius: 10px;
     border: 10px dashed var(--background_container);
     padding: var(--margin);
+}
+
+.skills li ul {
+    margin-left: 25px;
+    opacity: 0.7;
+    margin-bottom: 25px;
 }
