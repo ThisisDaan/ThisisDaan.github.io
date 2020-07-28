@@ -1,3 +1,27 @@
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text: #fff;
+        --background: #121212;
+        --accent_colour: #2962FF;
+        --accent_colour_hover: #fff;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --text: #000;
+        --background: #fff;
+        --accent_colour: #2962FF;
+        --accent_colour_hover: #2962FF;
+    }
+}
+
+
+
+body {
+    background-color: var(--background);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -33,9 +57,11 @@
     max-width: 250px;
     user-select: none;
     pointer-events: none;
+    filter: brightness(80%);
 }
 
 .header h1 {
+    color: var(--text);
     margin: 5px;
     line-height: 2em;
     text-align: center;
@@ -53,13 +79,14 @@
 }
 
 .navigation .item {
-    color: #0000ee;
+    color: var(--accent_colour);
     text-transform: capitalize;
     text-decoration: none;
     cursor: pointer;
 }
 
 .navigation .item:hover {
+    color: var(--accent_colour_hover);
     opacity: 0.5;
 }
 
@@ -79,13 +106,13 @@
 }
 
 ::selection {
-    color: white;
-    background: black;
+    color: var(--background);
+    background: var(--text);
 }
 
 ::-moz-selection {
-    color: white;
-    background: black;
+    color: var(--background);
+    background: var(--text);
 }
 
 .dropdown-menu {
