@@ -225,13 +225,16 @@ Navigation
         position: relative;
     }
 
-    .navigation li {
+
+
+    /* .navigation li {
         width: 100%;
 
-    }
+    } */
 
     .navigation .item {
-        padding: 25px;
+        padding: 15px;
+        font-size: 1.5em;
     }
 
     .dropdown-menu .item {
