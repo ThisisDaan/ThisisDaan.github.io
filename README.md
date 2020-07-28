@@ -2,3 +2,4 @@
 
 Completely written in html/css
 - Responive design.
+- Dark and Light color scheme.
