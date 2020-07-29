@@ -5,17 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/logic.js"></script>
     <title>This is Daan</title>
 </head>
 
 <body>
     <div class="layout">
         <header class="header">
-            <div class="top"></div>
+            <div class="top">I like to keep things simple.</div>
             <div class="profile">
                 <div class="avatar-container">
-                    <img class="avatar" src="images/avatar.jpg">
-                    <img class="sunglasses" src="images/sunglasses.png">
+                    <img class="avatar not-selectable" src="images/avatar.jpg">
+                    <img class="sunglasses not-selectable" src="images/sunglasses.png">
                 </div>
                 <h1>This is Daan</h1>
                 <nav class="navigation">
@@ -42,8 +43,17 @@
                             </label>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a class="item" href="mailto:mail@thisisdaan.com">
-                                        Email
+                                    <a class="item" href="mailto:mail@thisisdaan.com"
+                                        onclick="copy_to_clipboard(this.getAttribute('data-copy'));"
+                                        data-copy="mail@thisisdaan.com">
+                                        copy & Email
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="item" href="#iXec#2706"
+                                        onclick="copy_to_clipboard(this.getAttribute('data-copy'));"
+                                        data-copy="#iXec#2706">
+                                        copy Discord
                                     </a>
                                 </li>
                                 <li>
@@ -59,11 +69,6 @@
                                 <li>
                                     <a class="item" href="https://www.instagram.com/this_is_daan">
                                         Instagram
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="item" href="#iXec#2706">
-                                        Discord
                                     </a>
                                 </li>
                             </ul>
@@ -101,49 +106,52 @@
             </section>
             <section class="container" id="skills">
                 <h2>Skills</h2>
-                <ul class="skills">
-                    <li>Programming:
-                        <ul>
-                            <li>Python3</li>
-                            <li>JavaScript</li>
-                        </ul>
-                    </li>
-                    <li>Web Development:
-                        <ul>
-                            <li>HTML</li>
-                            <li>CSS</li>
-                            <li>JavaScript</li>
-                            <li>Flask</li>
-                            <li>Jinja2</li>
-                            <li>Tornado</li>
-                        </ul>
-                    </li>
-                    <li>Database:
-                        <ul>
-                            <li>Sqlite3</li>
-                            <li>SqlAlchemy</li>
-                        </ul>
-                    </li>
-                    <li>Graphics:
-                        <ul>
-                            <li>Adobe Photoshop</li>
-                        </ul>
-                    </li>
-                    <li>Version control:
-                        <ul>
-                            <li>GIT</li>
-                        </ul>
-                    </li>
-                    <li>Familiar with:
-                        <ul>
-                            <li>Vscode</li>
-                            <li>UX Design</li>
-                            <li>Linux environment</li>
-                            <li>Windows environment</li>
-                            <li>Wordpress</li>
-                        </ul>
-                    </li>
-                </ul>
+                <div class="left-to-right">
+                    <ul class="skills">
+                        <li>Programming:
+                            <ul>
+                                <li>Python3</li>
+                                <li>JavaScript</li>
+                            </ul>
+                        </li>
+                        <li>Web Development:
+                            <ul>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JavaScript</li>
+                                <li>Flask</li>
+                                <li>Jinja2</li>
+                                <li>Tornado</li>
+                            </ul>
+                        </li>
+                        <li>Database:
+                            <ul>
+                                <li>Sqlite3</li>
+                                <li>SqlAlchemy</li>
+                            </ul>
+                        </li>
+                        <li>Graphics:
+                            <ul>
+                                <li>Adobe Photoshop</li>
+                            </ul>
+                        </li>
+                        <li>Version control:
+                            <ul>
+                                <li>GIT</li>
+                            </ul>
+                        </li>
+                        <li>Familiar with:
+                            <ul>
+                                <li>Vscode</li>
+                                <li>UX Design</li>
+                                <li>Linux environment</li>
+                                <li>Windows environment</li>
+                                <li>Wordpress</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <img class="illustration not-selectable" src="images/undraw_Progress_tracking_re_ulfg.svg">
+                </div>
             </section>
             <section class="container" id="portofolio">
                 <h2>Portofolio</h2>
@@ -164,7 +172,7 @@
                 </a>
             </section>
         </main>
-
+        <input name="My purpose is to copy text :(" class="hidden" type="text" value="Copy me!" id="CopyMaker">
     </div>
 </body>
 <!-- 
