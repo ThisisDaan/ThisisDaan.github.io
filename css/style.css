@@ -37,8 +37,6 @@ Theme
         width: 50%;
         height: 50%;
         transform: rotate(10deg);
-        user-select: none;
-        pointer-events: none;
     }
 }
 
@@ -102,6 +100,12 @@ a:hover {
     justify-content: space-around;
     width: 100%;
     min-height: calc(100vh - var(--margin));
+
+}
+
+.not-selectable {
+    user-select: none;
+    pointer-events: none;
 }
 
 .profile {
@@ -119,8 +123,6 @@ a:hover {
     border-radius: 50%;
     width: 100%;
     max-width: 250px;
-    user-select: none;
-    pointer-events: none;
     filter: brightness(80%);
 }
 
@@ -135,12 +137,17 @@ a:hover {
     padding: var(--margin);
     animation: blinker 2s linear infinite;
     border: 2px solid transparent;
+    transition: ease-in-out 0.1s;
 }
 
 .start-game:hover {
     border-radius: 15px;
     border: 2px solid var(--accent_colour);
     text-decoration: none;
+}
+
+.start-game:active {
+    box-shadow: inset 0 0 0 15px #323232;
 }
 
 @keyframes blinker {
@@ -230,6 +237,61 @@ Navigation
     width: 100%;
 }
 
+#menu-toggle {
+    display: none;
+}
+
+#menu-toggle:checked+label+.dropdown-menu {
+    max-height: none;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.container.notification {
+    border-color: #600020;
+}
+
+.container h2 {
+    margin-bottom: var(--margin);
+}
+
+.container {
+    margin-top: var(--margin);
+    width: 100%;
+    border-radius: 10px;
+    border: 10px dashed var(--background_container);
+    padding: var(--margin);
+    overflow: hidden;
+}
+
+.skills li ul {
+    margin-left: 25px;
+    opacity: 0.7;
+    margin-bottom: 25px;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.left-to-right {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.illustration {
+    align-self: center;
+    justify-self: center;
+    height: 500px;
+}
+
 @media (max-width: 768px) {
     .dropdown-menu {
         position: relative;
@@ -248,40 +310,9 @@ Navigation
         margin-right: 50px;
         margin-left: 50px
     }
-}
 
-#menu-toggle {
-    display: none;
-}
-
-#menu-toggle:checked+label+.dropdown-menu {
-    max-height: none;
-}
-
-.main {
-    display: flex;
-    flex-direction: column;
-
-}
-
-.container.notification {
-    border-color: #600020;
-}
-
-.container h2 {
-    margin-bottom: var(--margin);
-}
-
-.container {
-    margin-top: var(--margin);
-    width: 100%;
-    border-radius: 10px;
-    border: 10px dashed var(--background_container);
-    padding: var(--margin);
-}
-
-.skills li ul {
-    margin-left: 25px;
-    opacity: 0.7;
-    margin-bottom: 25px;
+    .main {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
 }
