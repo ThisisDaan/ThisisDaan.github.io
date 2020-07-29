@@ -4,89 +4,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/logic.js"></script>
+    <link rel="stylesheet" href="css/Daan.css">
+    <link rel="stylesheet" href="css/theme.css">
     <title>This is Daan</title>
 </head>
 
 <body>
     <div class="layout">
-        <header class="header">
-            <div class="top">I like to keep things simple.</div>
-            <div class="profile">
-                <div class="avatar-container">
-                    <img class="avatar not-selectable" src="images/avatar.jpg">
-                    <img class="sunglasses not-selectable" src="images/sunglasses.png">
-                </div>
-                <h1>This is Daan</h1>
-                <nav class="navigation">
-                    <ul>
-                        <li>
-                            <a class="item" href="https://github.com/ThisisDaan">
-                                GitHub
-                            </a>
-                        </li>
-                        <li>
-                            <a class="item" href="#about">
-                                About
-                            </a>
-                        </li>
-                        <li>
-                            <a class="item" href="#portofolio">
-                                Portofolio
-                            </a>
-                        </li>
-                        <li>
-                            <input type="checkbox" id="menu-toggle" />
-                            <label for="menu-toggle" class="item">
-                                Social links
-                            </label>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a class="item" href="mailto:mail@thisisdaan.com"
-                                        onclick="copy_to_clipboard(this.getAttribute('data-copy'));"
-                                        data-copy="mail@thisisdaan.com">
-                                        copy & Email
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="item" href="#iXec#2706"
-                                        onclick="copy_to_clipboard(this.getAttribute('data-copy'));"
-                                        data-copy="#iXec#2706">
-                                        copy Discord
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="item" href="https://steamcommunity.com/id/ixec">
-                                        Steam
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="item" href="https://www.twitch.tv/this_is_daan">
-                                        Twitch.TV
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="item" href="https://www.instagram.com/this_is_daan">
-                                        Instagram
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a class="item" href="#contact">
-                                Contact
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-            <a href="#start" class="start-game">
-                → Click here to start ←
-            </a>
+        <header class="header flex vertical sticky">
+            <nav>
+                <ul class="navigation horizontal horizontal-center">
+                    <li>
+                        <a class="item" href="https://github.com/ThisisDaan">
+                            GitHub
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item" href="#about">
+                            About
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item" href="#skills">
+                            Skills
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item" href="#portofolio">
+                            Portofolio
+                        </a>
+                    </li>
 
+                    <li>
+                        <a class="item" href="#contact">
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+            </nav>
         </header>
-        <main class="main" id="start">
+        <section class="bg-code flex vertical center-center space-evenly fullscreen">
+            <div class="profile">
+                <img class="avatar not-selectable" src="images/avatar.jpg">
+                <h1>This is Daan</h1>
+                <h2>I like to keep things simple.</h2>
+            </div>
+            <a href="#start" class="fade-in-out">
+                ↓ Scroll down for more ↓
+            </a>
+        </section>
+        <main class="flex vertical horizontal-center" id="start">
             <section class="container notification">
                 <h2>!! Read me !!</h2>
                 <p>
@@ -150,33 +117,21 @@
                             </ul>
                         </li>
                     </ul>
-                    <img class="illustration not-selectable" src="images/undraw_Progress_tracking_re_ulfg.svg">
                 </div>
             </section>
             <section class="container" id="portofolio">
                 <h2>Portofolio</h2>
-                <div class="portofolio-info">
-                    <h4> Media server for watching movies together.</h4>
-                    <P>- Scans your libraries.</P>
-                    <P> - Downloads meta and posters from TMDB.</P>
-                    <P>- Easy to use.</P>
-                    <P> - Share the link and watch together.</P>
-                    <a href="https://github.com/ThisisDaan/iXecSync">Source code</a>
-                </div>
-                <div class="grid">
-                    <img class="grid-image" src="images/portofolio/ixecsync_1.jpg">
-                    <img class="grid-image" src="images/portofolio/ixecsync_2.jpg">
-                    <img class="grid-image" src="images/portofolio/ixecsync_3.jpg">
-                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex tempora repellat explicabo nulla pariatur
+                    enim dolores rem distinctio voluptate! Nihil, ex velit dolorem in cupiditate modi dignissimos.
+                    Maiores, nemo doloremque.</p>
             </section>
             <section class="container" id="contact">
                 <h2>Contact</h2>
-                <a href="mailto:mail@thisisdaan.com">
-                    MAIL@THISISDAAN.COM
+                <a class="primary text" href="mailto:mail@thisisdaan.com">
+                    mail@ThisisDaan.com
                 </a>
             </section>
         </main>
-        <input name="My purpose is to copy text :(" class="hidden" type="text" value="Copy me!" id="CopyMaker">
     </div>
 </body>
 <!-- 

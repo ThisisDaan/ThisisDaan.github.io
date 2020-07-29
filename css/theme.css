@@ -1,0 +1,55 @@
+/* 
+Theme
+*/
+
+:root {
+    --margin: 30px;
+}
+
+/* @media (prefers-color-scheme: dark) { */
+:root {
+    --primary-color: #2979ff;
+    --primary-background: rgba(35, 35, 35, 0.8);
+    --background-primary: #181818;
+    --background-secondary: #121212;
+    --text-on-background: #fff;
+    --text-on-primary-background: #fff;
+    --selector-on-primary-background: var(--primary-color);
+    --surface-1: rgba(0, 0, 0, 0.2);
+}
+
+/* } */
+
+/* @media (prefers-color-scheme: light) {
+    :root {
+        --primary-color: #2979ff;
+        --primary-background: var(--primary-color);
+        --background-primary: #fafafa;
+        --background-secondary: #fff;
+        --text-on-background: #000;
+        --text-on-primary-background: #fff;
+        --selector-on-primary-background: #fff;
+        --surface-1: rgba(0, 0, 0, 0.2);
+    }
+} */
+
+
+.primary.text {
+    color: var(--primary-color);
+    font-weight: 600;
+    opacity: 0.9;
+}
+
+a.primary.text:hover {
+    opacity: 1;
+}
+
+.fade-in-out {
+    animation: blinker 2s linear infinite;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0.5;
+    }
+}

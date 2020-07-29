@@ -1,0 +1,255 @@
+/* 
+Reset default values
+*/
+
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+    z-index: 20;
+}
+
+/* 
+https://fonts.google.com/specimen/Fira+Code 
+*/
+
+@font-face {
+    font-family: "Daan";
+    src: url('../fonts/FiraCode.ttf');
+}
+
+
+html {
+    font-family: "Daan";
+    background-color: var(--background-primary);
+    color: var(--text-on-background);
+}
+
+body {
+    overflow: hidden;
+}
+
+
+/*
+Layout
+*/
+
+.layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    overflow-y: scroll;
+    max-height: 100vh;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+
+.layout header {
+    scroll-snap-align: start;
+    z-index: 1337;
+}
+
+.layout main {
+    scroll-snap-align: start;
+    background-color: var(--background-secondary);
+    z-index: 2;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex.horizontal {
+    flex-direction: row;
+}
+
+.flex.vertical {
+    flex-direction: column;
+}
+
+.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+.flex.space-between {
+    justify-content: space-between;
+}
+
+.flex.space-between {
+    justify-content: space-around;
+}
+
+.flex.space-evenly {
+    justify-content: space-evenly;
+}
+
+.center-center {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.horizontal-center {
+    align-items: center;
+    justify-content: center;
+}
+
+.vertical-center {
+    justify-content: center;
+}
+
+.fullscreen {
+    width: 100%;
+    height: 100vh;
+}
+
+/*
+Useful stuff
+*/
+.not-selectable {
+    user-select: none;
+    pointer-events: none;
+}
+
+.hidden-but-not-gone {
+    opacity: 0;
+}
+
+/*
+Typography
+*/
+h1 {
+    font-size: 3em;
+}
+
+h1+h2 {
+    font-size: 1em;
+    opacity: .9;
+}
+
+a {
+    color: var(--text-on-background);
+}
+
+
+.header {
+    background-color: var(--primary-background);
+    box-shadow: 0px 0 15px rgba(0, 0, 0, 0.3), inset 0 -2px 0 var(--surface-1);
+}
+
+/*
+Navigation
+*/
+
+.navigation {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 25px;
+}
+
+/* nav>.navigation>li+li {
+    margin-left: 10px;
+} */
+
+.navigation li .item {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+    color: var(--text-on-primary-background);
+    padding: calc(var(--margin) / 2);
+}
+
+
+@media (hover: hover) {
+    .navigation li .item:hover {
+        border-bottom: 2px solid var(--selector-on-primary-background);
+        ;
+    }
+}
+
+.navigation li .navigation {
+    display: none;
+}
+
+.submenu {
+    position: relative;
+}
+
+.submenu .navigation {
+    position: absolute;
+    width: 100%;
+    background-color: var(--surface-2);
+    top: calc(var(--margin) * 2 + 5px);
+}
+
+#hamburger-menu:checked+.item {
+    background-color: var(--surface-1);
+}
+
+#hamburger-menu:checked+label+.navigation {
+    display: block;
+}
+
+#hamburger-menu {
+    display: none;
+}
+
+/*
+Components
+*/
+
+.profile {
+    width: 768px;
+    z-index: 2;
+}
+
+.avatar {
+    border-radius: 50%;
+    width: 50%
+}
+
+.bg-code {
+    position: relative;
+}
+
+.bg-code::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background-image: url(../images/code.jpg);
+    background-size: cover;
+    -webkit-filter: blur(5px) brightness(50%);
+    -moz-filter: blur(5px) brightness(50%);
+    -o-filter: blur(5px) brightness(50%);
+    -ms-filter: blur(5px) brightness(50%);
+    filter: blur(5px) brightness(50%);
+}
+
+.container {
+    z-index: 2;
+    width: 768px;
+    padding: var(--margin);
+    padding-top: calc(var(--margin) + 65px);
+}
+
+/*
+Lists
+*/
+
+ul li ul {
+    margin-left: 20px;
+    margin-bottom: var(--margin);
+}
+
+ul li ul li::before {
+    content: "> "
+}
