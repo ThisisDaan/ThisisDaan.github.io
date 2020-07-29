@@ -316,3 +316,36 @@ Navigation
         padding-right: 0px;
     }
 }
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-column-gap: var(--margin);
+    grid-row-gap: var(--margin);
+}
+
+.grid-image {
+    overflow: hidden;
+    border-radius: 15px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.portofolio-info {
+    padding: var(--margin) 0px var(--margin) 0px;
+}
+
+.portofolio-info h4 {
+    margin-bottom: 10px;
+}
+
+.portofolio-info a {
+    display: block;
+    margin-top: 10px;
+}
+
+hr {
+    margin-top: var(--margin);
+    margin-bottom: var(--margin);
+    border-color: var(--background_container);
+}
