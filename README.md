@@ -1,5 +1,5 @@
 # The source code of ThisisDaan.com
 
-Completely written in html/css
+Written in html/css with some js
 - Responive design.
 - Dark and Light color scheme.
