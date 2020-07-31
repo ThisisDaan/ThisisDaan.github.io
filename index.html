@@ -10,138 +10,32 @@
 </head>
 
 <body>
-    <div class="layout">
-        <header class="header flex vertical sticky">
-            <nav>
-                <ul class="navigation horizontal horizontal-center">
-                    <li>
-                        <label class="item" for="hamburger-menu">MENU</label>
-                    </li>
+    <nav class="navigation">
+        <label class="item" for="mobile-menu">
+            Navigation
+        </label>
+        <input id="mobile-menu" type="checkbox" name="mobile-menu">
+        <label for="mobile-menu">
+            <ul>
+                <li>
+                    <a href="https://github.com/ThisisDaan" class="item">
+                        GitHub
+                    </a>
+                </li>
+            </ul>
+        </label>
+    </nav>
+    <header>
+        <img class="avatar" src="/images/avatar.jpg">
+        <h1>This is Daan</h1>
+        <h2>I like to keep things simple.</h2>
+    </header>
+    <main>
 
-                </ul>
-            </nav>
-            <nav>
-                <input type="checkbox" id="hamburger-menu">
-                <ul class="navigation horizontal horizontal-center">
-                    <li>
-                        <a class="item" href="https://github.com/ThisisDaan">
-                            GitHub
-                        </a>
-                    </li>
-                    <li>
-                        <a class="item" href="#about">
-                            About
-                        </a>
-                    </li>
-                    <li>
-                        <a class="item" href="#skills">
-                            Skills
-                        </a>
-                    </li>
-                    <li>
-                        <a class="item" href="#portofolio">
-                            Portofolio
-                        </a>
-                    </li>
-                    <li>
-                        <a class="item" href="#contact">
-                            Contact
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-        <section class="bg-code flex vertical center-center space-evenly fullscreen">
-            <div class="profile">
-                <img class="avatar not-selectable" src="images/avatar.jpg">
-                <h1>This is Daan</h1>
-                <h2>I like to keep things simple.</h2>
-            </div>
-            <a href="#start" class="fade-in-out">
-                ↓ Scroll down for more ↓
-            </a>
-        </section>
-        <main class="flex vertical horizontal-center" id="start">
-            <section class="container notification">
-                <h2>!! Read me !!</h2>
-                <p>
-                    This page is still a work in progress.
-                </p>
-            </section>
-            <section class="container" id="about">
-                <h2>About</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur hendrerit, nisl ac imperdiet
-                    pretium, mi quam sollicitudin lacus, ac malesuada felis ipsum a dolor. Nullam ipsum urna, tempor vel
-                    elementum eu, luctus eu enim. Nullam ut placerat lorem. Integer non velit consequat, ornare augue
-                    id, mollis elit. Proin efficitur, magna id viverra gravida, est dolor ultrices urna, ac vestibulum
-                    erat turpis pharetra felis. Proin fermentum eleifend iaculis. Duis faucibus finibus est, eu
-                    fringilla libero porta nec. In ornare sed dolor at pretium. Donec lectus sapien, laoreet a ex at,
-                    luctus blandit dolor. Etiam faucibus ultricies posuere. Nullam pretium quam ac consequat imperdiet.
-                    Nulla tellus felis, feugiat id diam at, accumsan congue metus.</p>
-            </section>
-            <section class="container" id="skills">
-                <h2>Skills</h2>
-                <div class="left-to-right">
-                    <ul class="skills">
-                        <li>Programming:
-                            <ul>
-                                <li>Python3</li>
-                                <li>JavaScript</li>
-                            </ul>
-                        </li>
-                        <li>Web Development:
-                            <ul>
-                                <li>HTML</li>
-                                <li>CSS</li>
-                                <li>JavaScript</li>
-                                <li>Flask</li>
-                                <li>Jinja2</li>
-                                <li>Tornado</li>
-                            </ul>
-                        </li>
-                        <li>Database:
-                            <ul>
-                                <li>Sqlite3</li>
-                                <li>SqlAlchemy</li>
-                            </ul>
-                        </li>
-                        <li>Graphics:
-                            <ul>
-                                <li>Adobe Photoshop</li>
-                            </ul>
-                        </li>
-                        <li>Version control:
-                            <ul>
-                                <li>GIT</li>
-                            </ul>
-                        </li>
-                        <li>Familiar with:
-                            <ul>
-                                <li>Vscode</li>
-                                <li>UX Design</li>
-                                <li>Linux environment</li>
-                                <li>Windows environment</li>
-                                <li>Wordpress</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-            <section class="container" id="portofolio">
-                <h2>Portofolio</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex tempora repellat explicabo nulla pariatur
-                    enim dolores rem distinctio voluptate! Nihil, ex velit dolorem in cupiditate modi dignissimos.
-                    Maiores, nemo doloremque.</p>
-            </section>
-            <section class="container" id="contact">
-                <h2>Contact</h2>
-                <a class="primary text" href="mailto:mail@thisisdaan.com">
-                    mail@ThisisDaan.com
-                </a>
-            </section>
-        </main>
-    </div>
+    </main>
 </body>
+
+
 <!-- 
 
 Thank you for viewing my source code!
@@ -150,5 +44,6 @@ You can download it at
 https://github.com/ThisisDaan/ThisisDaan.github.io
 
 -->
+<script src="js/Daan.js"></script>
 
 </html>
