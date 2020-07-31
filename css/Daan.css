@@ -96,6 +96,19 @@ body {
     border-radius: 50%;
 }
 
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, #181818 100%);
+    background-position: bottom;
+    z-index: 3;
+}
+
 header {
     display: flex;
     flex-direction: column;
@@ -116,7 +129,7 @@ header::after {
     left: 0;
     z-index: -1;
     opacity: 0.2;
-    filter: blur(4px);
+    filter: blur(2px);
     background-image: url(/images/code.jpg);
     background-position: center top;
     background-repeat: no-repeat;
@@ -154,6 +167,59 @@ p {
     max-width: 80ch;
 }
 
-p:last-of-type {
-    margin-bottom: 50px;
+h2 {
+    font-size: 1.5em;
+}
+
+
+a:hover {
+    opacity: 0.9;
+}
+
+
+.container {
+    position: relative;
+    margin-bottom: 55px;
+}
+
+main>section>div {
+    margin-left: 25px;
+}
+
+.class-color {
+    color: #a6e22e;
+}
+
+.id-color {
+    color: #f92672;
+}
+
+.value-color {
+    color: #66d9ef;
+}
+
+.link-color {
+    color: #e6db74;
+}
+
+.curly-brackets-name {
+    font-size: 25px;
+}
+
+.curly-brackets-name::after {
+    color: #f8f8f2;
+    font-size: 25px;
+    content: "{";
+}
+
+.curly-brackets {
+    position: relative;
+}
+
+.curly-brackets::after {
+    position: absolute;
+    font-size: 25px;
+    left: -25px;
+    content: "}";
+
 }
